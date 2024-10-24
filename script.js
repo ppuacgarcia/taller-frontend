@@ -43,12 +43,8 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
       });
   
       const result = await response.json(); // Convierte la respuesta a JSON
-  
-      if (response.ok) {
-        alert('Libro agregado con éxito'); // Muestra una alerta si todo salió bien
-      } else {
-        alert(`Error: ${result.message || JSON.stringify(result)}`); // Muestra error si la respuesta no es OK
-      }
+
+      showMessage(response.ok ? 'Libro agregado con éxito' : `Error: ${result.message}`);
     } catch (error) {
       alert(`Error: ${error.message}`); // Muestra un mensaje si ocurre un error durante la solicitud
     }
