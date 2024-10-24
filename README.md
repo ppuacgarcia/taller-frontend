@@ -11,8 +11,6 @@ Este proyecto consiste en una aplicación web sencilla para la gestión de libro
 A continuación, se describe cada archivo, cómo funcionan entre sí y cómo configurar el proyecto para su correcto funcionamiento.
 Estructura del Proyecto
 
-bash
-
 ```
 /proyecto-gestion-libros
 │
