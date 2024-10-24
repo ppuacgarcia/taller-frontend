@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Libros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API de Gestión de Libros</h1>
+
+    <section>
+      <button id="listBooks">Listar Libros</button>
+      <div id="booksList"></div>
+    </section>
+
+    <section>
+      <h2>Agregar Nuevo Libro</h2>
+      <form id="bookForm">
+        <input type="text" id="title" name="title" placeholder="Título" maxlength="255" required>
+        <input type="text" id="author" name="author" placeholder="Autor" maxlength="255" required>
+        <textarea id="description" name="description" placeholder="Descripción" required></textarea>
+        <input type="text" id="isbn" name="isbn" placeholder="ISBN (13 dígitos)" required>
+        <input type="date" id="publishedAt" name="publishedAt" required>
+        <input type="number" id="availableCopies" name="availableCopies" min="0" required placeholder="Copias Disponibles">
+        <button type="submit">Agregar Libro</button>
+      </form>
+            
+    </section>
+
+    <section>
+      <h2>Actualizar Libro</h2>
+      <form id="updateForm">
+        <input type="number" id="updateId" placeholder="ID del Libro" required>
+        <input type="text" id="updateTitle" placeholder="Nuevo Título" maxlength="255">
+        <input type="text" id="updateAuthor" placeholder="Nuevo Autor" maxlength="255">
+        <textarea id="updateDescription" placeholder="Nueva Descripción"></textarea>
+        <button type="submit">Actualizar Libro</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Eliminar Libro</h2>
+      <form id="deleteForm">
+        <input type="number" id="deleteId" placeholder="ID del Libro" required>
+        <button type="submit">Eliminar Libro</button>
+      </form>
+    </section>
+
+    <div id="responseMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
