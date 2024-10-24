@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Define que se está utilizando la versión HTML5 y el idioma del documento es inglés -->
   <meta charset="UTF-8">
+  <!-- Ajusta la vista del sitio para que sea compatible con dispositivos móviles -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título de la página web que se mostrará en la pestaña del navegador -->
   <title>Gestión de Libros</title>
+  <!-- Vincula una hoja de estilos externa llamada "styles.css" -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Contenedor principal que engloba todo el contenido de la página -->
   <div class="container">
+    <!-- Título principal de la página -->
     <h1>API de Gestión de Libros</h1>
 
+    <!-- Primera sección para listar libros -->
     <section>
+      <!-- Botón que, al hacer clic, desencadenará la acción de listar los libros -->
       <button id="listBooks">Listar Libros</button>
+      <!-- Div vacío donde se mostrará la lista de libros obtenidos de la API -->
       <div id="booksList"></div>
     </section>
 
+    <!-- Sección para agregar un nuevo libro -->
     <section>
       <h2>Agregar Nuevo Libro</h2>
+      <!-- Formulario para ingresar los datos de un nuevo libro -->
       <form id="bookForm">
+        <!-- Campo para ingresar el título del libro, requerido y con un máximo de 255 caracteres -->
         <input type="text" id="title" name="title" placeholder="Título" maxlength="255" required>
+        <!-- Campo para ingresar el autor del libro, requerido y con un máximo de 255 caracteres -->
         <input type="text" id="author" name="author" placeholder="Autor" maxlength="255" required>
+        <!-- Campo para ingresar una descripción del libro, requerido -->
         <textarea id="description" name="description" placeholder="Descripción" required></textarea>
+        <!-- Campo para ingresar el ISBN del libro, requerido y debe tener 13 dígitos -->
         <input type="text" id="isbn" name="isbn" placeholder="ISBN (13 dígitos)" required>
+        <!-- Campo para ingresar la fecha de publicación del libro, requerido -->
         <input type="date" id="publishedAt" name="publishedAt" required>
+        <!-- Campo para ingresar la cantidad de copias disponibles, requerido y con un mínimo de 0 -->
         <input type="number" id="availableCopies" name="availableCopies" min="0" required placeholder="Copias Disponibles">
+        <!-- Botón para enviar el formulario y agregar el nuevo libro -->
         <button type="submit">Agregar Libro</button>
       </form>
-            
     </section>
 
+    <!-- Sección para actualizar un libro existente -->
     <section>
       <h2>Actualizar Libro</h2>
+      <!-- Formulario para actualizar los datos de un libro -->
       <form id="updateForm">
+        <!-- Campo para ingresar el ID del libro a actualizar, requerido -->
         <input type="number" id="updateId" placeholder="ID del Libro" required>
+        <!-- Campo opcional para ingresar el nuevo título del libro -->
         <input type="text" id="updateTitle" placeholder="Nuevo Título" maxlength="255">
+        <!-- Campo opcional para ingresar el nuevo autor del libro -->
         <input type="text" id="updateAuthor" placeholder="Nuevo Autor" maxlength="255">
+        <!-- Campo opcional para ingresar la nueva descripción del libro -->
         <textarea id="updateDescription" placeholder="Nueva Descripción"></textarea>
+        <!-- Botón para enviar el formulario y actualizar el libro -->
         <button type="submit">Actualizar Libro</button>
       </form>
     </section>
 
+    <!-- Sección para eliminar un libro -->
     <section>
       <h2>Eliminar Libro</h2>
+      <!-- Formulario para eliminar un libro especificando su ID -->
       <form id="deleteForm">
+        <!-- Campo para ingresar el ID del libro a eliminar, requerido -->
         <input type="number" id="deleteId" placeholder="ID del Libro" required>
+        <!-- Botón para enviar el formulario y eliminar el libro -->
         <button type="submit">Eliminar Libro</button>
       </form>
     </section>
 
+    <!-- Div que mostrará mensajes de respuesta, como confirmaciones o errores -->
     <div id="responseMessage"></div>
   </div>
 
+  <!-- Enlace a un archivo JavaScript externo llamado "script.js" donde se manejará la lógica -->
   <script src="script.js"></script>
 </body>
 </html>

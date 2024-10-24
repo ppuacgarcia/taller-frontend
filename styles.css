@@ -1,60 +1,96 @@
+/* Estilo global del body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 600px;
-  }
-  
-  h1, h2 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  input, textarea {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  #booksList {
-    margin-top: 20px;
-  }
-  
-  #responseMessage {
-    margin-top: 15px;
-    text-align: center;
-  }
-  
+  /* Define la fuente principal como Arial, con una alternativa sans-serif si no está disponible */
+  font-family: Arial, sans-serif;
+  /* Establece un color de fondo gris claro */
+  background-color: #f4f4f4;
+  /* Elimina los márgenes y el relleno por defecto del body */
+  margin: 0;
+  padding: 0;
+  /* Usa Flexbox para centrar el contenido horizontal y verticalmente */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  /* Define la altura del body como el doble de la altura de la pantalla para permitir desplazamiento */
+  height: 200vh;
+}
+
+/* Estilo del contenedor principal */
+.container {
+  /* Establece un fondo blanco */
+  background-color: #fff;
+  /* Define un relleno interno de 20px para el contenido */
+  padding: 20px;
+  /* Aplica bordes redondeados */
+  border-radius: 10px;
+  /* Añade una sombra ligera alrededor del contenedor */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* Fija el ancho del contenedor en 600px */
+  width: 600px;
+}
+
+/* Estilo de los títulos (h1 y h2) */
+h1, h2 {
+  /* Centra el texto */
+  text-align: center;
+}
+
+/* Estilo de los formularios */
+form {
+  /* Usa Flexbox para alinear los elementos en columna */
+  display: flex;
+  flex-direction: column;
+  /* Añade un margen inferior para separar los formularios entre sí */
+  margin-bottom: 20px;
+}
+
+/* Estilo de los campos de entrada y áreas de texto */
+input, textarea {
+  /* Añade márgenes superior e inferior para espaciar los elementos */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  /* Define un relleno interno de 10px para que el texto no quede pegado al borde */
+  padding: 10px;
+  /* Añade un borde gris claro */
+  border: 1px solid #ccc;
+  /* Aplica bordes redondeados */
+  border-radius: 5px;
+}
+
+/* Estilo de los botones */
+button {
+  /* Establece un fondo azul para los botones */
+  background-color: #007bff;
+  /* Define el color del texto como blanco */
+  color: white;
+  /* Elimina los bordes del botón */
+  border: none;
+  /* Añade relleno interno para mejorar la apariencia */
+  padding: 10px;
+  /* Cambia el cursor a "puntero" cuando se pasa sobre el botón */
+  cursor: pointer;
+  /* Aplica bordes redondeados */
+  border-radius: 5px;
+  /* Añade un margen superior para separar el botón del resto de los elementos */
+  margin-top: 10px;
+}
+
+/* Estilo del botón cuando se pasa el cursor por encima */
+button:hover {
+  /* Cambia el fondo a un tono más oscuro de azul */
+  background-color: #0056b3;
+}
+
+/* Estilo del div donde se mostrará la lista de libros */
+#booksList {
+  /* Añade un margen superior para separar la lista del contenido anterior */
+  margin-top: 20px;
+}
+
+/* Estilo del mensaje de respuesta */
+#responseMessage {
+  /* Añade un margen superior para espaciarlo del resto del contenido */
+  margin-top: 15px;
+  /* Centra el texto */
+  text-align: center;
+}
